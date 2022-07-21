@@ -19,6 +19,10 @@ class Passaro extends Animal with Voar {}
 
 class Peixe extends Animal with Nadar {}
 
+class Tubarao extends Peixe {
+  void locomocao() => print("${this.runtimeType} ${nadar()}");
+}
+
 class Golfinho extends Mamifero with Nadar {
   void locomocao() => print("${this.runtimeType} ${nadar()}");
 }
@@ -33,10 +37,6 @@ class Gato extends Mamifero with Andar {
 
 class Gaivota extends Passaro with Andar {
   void locomocao() => print("${this.runtimeType} ${andar()}");
-}
-
-class Tubarao extends Peixe {
-  void locomocao() => print("${this.runtimeType} ${nadar()}");
 }
 
 class PeixeVoador extends Peixe with Voar {
